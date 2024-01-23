@@ -11,7 +11,7 @@
 - **Takas - %2**
 - **Kalkan - %50**
 - **Sağlık - %75**
-- **Kalkan - %50**
+- **Zehir - %50**
 
 Bu olasılıkları ve mesajları, ayarlar dosyası üzerinden özelleştirebilirsiniz.
 

@@ -1,0 +1,33 @@
+{
+  "name": "duel",
+  "version": "1.0.0",
+  "description": "Arkadaşlarınızla düello yaparak keyifli bir zaman geçirebilirsiniz 🎉🍔",
+  "main": ".src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "cls && node ./src/index.js",
+    "dev": "cls && nodemon --no-warnings ./src/index.js"
+  },
+  "keywords": ["discord", "duel"],
+  "author": "Roman <romanbaba>",
+  "license": "GPL-3.0-or-later",
+  "dependencies": {
+    "discord.js": "^14.14.1",
+    "djs-bot-base": "^1.1.2",
+    "sneaks": "^0.0.1",
+    "utilscord": "^1.6.0",
+    "uuid": "^9.0.1",
+    "wio.db": "^4.0.22"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/romanbaba/discord-duelbot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/romanbaba/discord-duelbot/issues"
+  },
+  "homepage": "https://github.com/romanbaba/discord-duelbot#readme"
+}

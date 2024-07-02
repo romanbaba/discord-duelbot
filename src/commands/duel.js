@@ -137,10 +137,10 @@ export default new SlashCommand({
             sendLog({
               content: `**DÜELLO:** <@${interaction.user.id}> ve <@${opponent.id}> arasındaki maçta ilk el oynanmadığı için oyun iptal edildi.`,
             });
-          }, 15 * 1000);
+          }, 30 * 1000);
 
           const firstCollector = message.createMessageComponentCollector({
-            time: 15000,
+            time: 1000 * 30,
             max: Infinity,
             filter: (btn) => btn.user.id === interaction.user.id,
           });

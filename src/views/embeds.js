@@ -1,5 +1,5 @@
 // @ts-check
-import { AdvancedEmbed, AdvancedEmbedType } from "utilscord";
+import { AdvancedEmbed, EmbedStyle } from "utilscord";
 import config from "../config.js";
 
 /** @param {import("discord.js").CommandInteraction} interaction */
@@ -7,7 +7,7 @@ export const DeniedEmbed = (interaction) =>
 	new AdvancedEmbed()
 		// @ts-ignore
 		.setInteraction(interaction)
-		.setStyle(AdvancedEmbedType.Error, "Reddedildi")
+		.setStyle(EmbedStyle.Error, "Reddedildi")
 		.setDescription("Karşı rakip nihahi savaşı reddetdi.");
 
 /** @param {import("discord.js").CommandInteraction} interaction */
@@ -15,7 +15,7 @@ export const TimeIsOver = (interaction) =>
 	new AdvancedEmbed()
 		// @ts-ignore
 		.setInteraction(interaction)
-		.setStyle(AdvancedEmbedType.Error, "Zaman Aşımı")
+		.setStyle(EmbedStyle.Error, "Zaman Aşımı")
 		.setDescription("Karşı rakip nihahi savaşı zamanında kabul edemedi.");
 
 /** @param {import("discord.js").CommandInteraction} interaction */
@@ -23,22 +23,22 @@ export const FirstAttackNoUsed = (interaction) =>
 	new AdvancedEmbed()
 		// @ts-ignore
 		.setInteraction(interaction)
-		.setStyle(AdvancedEmbedType.Error, "Maç iptal edildi.")
+		.setStyle(EmbedStyle.Error, "Maç iptal edildi.")
 		.setDescription("İlk turdan eylem gerçekleşmediği için maç iptal edildi.");
 
 export function DuelWaitEmbed(interaction) {
 	return new AdvancedEmbed()
 		.setInteraction(interaction)
-		.setStyle(AdvancedEmbedType.Loading, "Bekleniyor...")
+		.setStyle(EmbedStyle.Loading, "Bekleniyor...")
 		.setDescription(
-			"⏳ **Düello isteğini 15 saniye içinde kabul etmezsen, otomatik olarak reddedilecektir.** Acele et ve savaşa hazırlan! 🤺🕒",
+			"⏳ **Düello isteğini 30 saniye içinde kabul etmezsen, otomatik olarak reddedilecektir.** Acele et ve savaşa hazırlan! 🤺🕒",
 		)
 		.setFields({
 			name: "Bilgilendirmeler",
 			value: [
 				"Eğer biriniz 2 kez elinizi oynamaz ise maç iptal edilir.",
 				"Eğer ikinizde üst üste elinizi oynamaz ise maç iptal edilir.",
-				"El başına 15 saniye süreniz bulunmaktadır.",
+				"El başına 30 saniye süreniz bulunmaktadır.",
 				"Yapacağınız her eylem kayıt altına alınmaktadır.",
 				"İyi eğlenceler! 🥳🎉",
 			]
@@ -50,7 +50,7 @@ export function DuelWaitEmbed(interaction) {
 export function UnavailableEmbed(interaction) {
 	return new AdvancedEmbed()
 		.setInteraction(interaction)
-		.setStyle(AdvancedEmbedType.Error)
+		.setStyle(EmbedStyle.Error)
 		.setDescription(
 			"Düello başlatmak için senin veya rakibinin bir oyunda olmaması gerekir.",
 		);
@@ -61,7 +61,7 @@ export function StartEmbed(buttonInteraction, interaction, opponent) {
 
 	return new AdvancedEmbed()
 		.setInteraction(buttonInteraction)
-		.setStyle(AdvancedEmbedType.Default, "Maç Başladı")
+		.setStyle(EmbedStyle.Default, "Maç Başladı")
 		.setDescription(
 			"Maç başladı; 15 saniye içinde atağınızı veya savunmanızı gerçekleştirmezseniz, el karşı tarafa geçer. Eğer her iki taraf da üst üste aynı durumu gerçekleştirirse, maç iptal edilir.",
 		)

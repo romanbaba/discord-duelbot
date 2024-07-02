@@ -1,16 +1,16 @@
 // @ts-check
+import { string } from "sneaks";
 import {
   AdvancedEmbed,
-  AdvancedEmbedType,
+  EmbedStyle,
   disabledButtons,
   randomInt,
 } from "utilscord";
 import config from "../config.js";
 import { gameDB } from "../db.js";
-import sendLog from "./log.js";
 import attackRow from "./attack.js";
 import { getUser } from "./general.js";
-import { string } from "sneaks";
+import sendLog from "./log.js";
 
 /** @type {Map<string, [NodeJS.Timeout, NodeJS.Timeout?]>} */
 export const timeouts = new Map();
@@ -459,7 +459,7 @@ export async function reRenderGame(
     interaction.message.embeds[0]?.data ?? undefined,
   )
     .setInteraction(interaction)
-    .setStyle(AdvancedEmbedType.Default, "Düello")
+    .setStyle(EmbedStyle.Default, "Düello")
     .setDescription(
       "Maç başladı; 15 saniye içinde atağınızı veya savunmanızı gerçekleştirmezseniz, el karşı tarafa geçer. Eğer her iki taraf da üst üste aynı durumu gerçekleştirirse, maç iptal edilir.",
     )

@@ -55,7 +55,7 @@ export default {
 		boost(power) {
 			return `🔊 **${power} adet yemek mi o? Harika bir tercih!** Şimdi <@{0}>'nin sıradaki hamlesini izleyelim. 🍔🔥`;
 		},
-		win: "👑👑 NİHAHİ SAVAŞ BİTTİ, EVRENİN SAHİBİ ARTIK <@{0}> OLDU. 👑👑",
+		win: "👑👑 NİHAHİ SAVAŞ BİTTİ, EVRENİN KAZANANI <@{0}> OLDU. 👑👑",
 		esc: "🤣🤣 PHUAHUAHUA <@{0}> KAÇTI!! 🤣🤣",
 		timeout:
 			"🔊 **Nihai savaş sırasında AFK kalmak mı? Güzel.** Şimdi de <@{0}>'nin sıradaki hamlesini izleyelim. 🍔🔥",

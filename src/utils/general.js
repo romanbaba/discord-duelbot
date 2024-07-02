@@ -1,5 +1,4 @@
 // @ts-check
-
 import { client } from "../client.js";
 
 export function getUser(userId) {
